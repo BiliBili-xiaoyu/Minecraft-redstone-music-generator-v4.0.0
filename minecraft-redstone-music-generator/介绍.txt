@@ -379,7 +379,7 @@ POST /api/config?name=my_preset
 1. **查看文档**：本项目README文件
 2. **提交Issue**：GitHub Issues页面
 3. **社区讨论**：相关Minecraft社区
-4. **邮件支持**：developer@example.com
+4. **邮件支持**：3678345815@qq.com
 
 ### 故障排除步骤
 1. 检查系统要求是否满足
@@ -404,6 +404,7 @@ POST /api/config?name=my_preset
 *最后更新：2025年12月20日*
 *版本：v2.5.0*
 *祝你在Minecraft的音乐创作之旅中玩得愉快！* 🎵✨
+作者：B站爱好中的烦恼
 
 
 
