@@ -1,0 +1,10 @@
+flask==2.3.2
+flask-cors==4.0.0
+numpy==1.26.4
+librosa==0.10.1
+soundfile==0.12.1
+pydub==0.25.1
+pillow==10.1.0
+scipy==1.11.4
+nbtlib==1.12.1
+pyyaml==6.0.1

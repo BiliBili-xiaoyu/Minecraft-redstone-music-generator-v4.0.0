@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  redstone-music-backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: redstone-music-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./projections:/app/projections
+      - ./logs:/app/logs
+    environment:
+      - FLASK_DEBUG=1
+      - MAX_CONTENT_LENGTH=104857600
+    restart: unless-stopped
+    networks:
+      - redstone-music-network
+
+  redstone-music-frontend:
+    image: nginx:alpine
+    container_name: redstone-music-frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - redstone-music-backend
+    restart: unless-stopped
+    networks:
+      - redstone-music-network
+
+networks:
+  redstone-music-network:
+    driver: bridge
